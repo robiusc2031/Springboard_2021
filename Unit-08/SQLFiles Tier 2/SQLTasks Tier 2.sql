@@ -57,8 +57,11 @@ Return the facid, facility name, member cost, and monthly maintenance of the
 facilities in question. */
 
 CODE:
+SELECT `facid` , `name` , `membercost` , `monthlymaintenance`
+FROM Facilities
+WHERE `membercost` > 0 AND `membercost` < `monthlymaintenance` * 0.20;
 
-ANSWER:
+ANSWER: Tennis Court 1, Tennis Court 2, Massage Room 1, Massage Room 2 and Squash Court
 
 /* Q4: Write an SQL query to retrieve the details of facilities with ID 1 and 5.
 Try writing the query without using the OR operator. */
