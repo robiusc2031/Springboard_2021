@@ -67,8 +67,12 @@ ANSWER: Tennis Court 1, Tennis Court 2, Massage Room 1, Massage Room 2 and Squas
 Try writing the query without using the OR operator. */
 
 CODE:
+SELECT *
+FROM `Facilities`
+WHERE `facid`
+IN ( 1, 5 );
 
-ANSWER:
+ANSWER:Tennis Court 2 and Massage Room 2
 
 /* Q5: Produce a list of facilities, with each labelled as
 'cheap' or 'expensive', depending on if their monthly maintenance cost is
